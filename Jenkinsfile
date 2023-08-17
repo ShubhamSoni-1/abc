@@ -1,7 +1,7 @@
 pipeline {
-    agent {
-	    args '-p 80:3000'
-    }
+    agent any
+
+	
     stages {
        
         stage('Install Dependencies') {
