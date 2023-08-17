@@ -17,7 +17,7 @@ pipeline {
         }
 	stage('Deploy') {
 	steps {
-		sh 'npm start '
+		sh 'npm start &'
 		sh ' cp -r build/* /usr/share/nginx/html'
 		sh 'systemctl restart nginx'
 		}
