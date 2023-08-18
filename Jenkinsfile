@@ -17,11 +17,7 @@ pipeline {
         }
 	stage('Deploy') {
 	steps {
-        	sh 'echo "sudoers config:"'
-        	sh 'cat /etc/sudoers'
-        	sh 'echo "Executing command:"'
-        	sh 'echo "sudo -S cp -r build/* /var/www/html"'
-        	sh 'sudo -S cp -r build/* /var/www/html'
+        	sh 'cp -r build/* /var/www/html/'
 		sh 'systemctl restart nginx'
 		}
 	}
