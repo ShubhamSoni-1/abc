@@ -22,10 +22,6 @@ pipeline {
         	sh 'echo "Executing command:"'
         	sh 'echo "sudo -S cp -r build/* /var/www/html"'
         	sh 'sudo -S cp -r build/* /var/www/html'
-    }
-}
-
-		}
 	}
 }
 
