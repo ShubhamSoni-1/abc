@@ -18,7 +18,7 @@ pipeline {
 	stage('Deploy') {
 	steps {
         	sh 'cp -r build/* /var/www/html/'
-		sh 'systemctl restart nginx'
+		sh 'nginx -s reload'
 		}
 	}
 }
